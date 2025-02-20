@@ -38,3 +38,31 @@
     border-radius: 0px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: #6E8E59;  /* Originalfärg */
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: darken(#6E8E59, 20%); /* Mörkare variant */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        background-color: lighten(#6E8E59, 20%); /* Ljusare variant */
+        opacity: 0.8;
+    }
+}
+
+#movingTitle {
+    max-width: 250px;
+    margin: 2% auto;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    padding: 10px 20px; /* Gör bakgrunden mer synlig */
+    border-radius: 10px; /* Mjuka hörn */
+    animation: pulse 5s ease-in-out infinite alternate; /* Lugn puls */
+}

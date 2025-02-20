@@ -20,3 +20,16 @@ function toggleMenu() {
         navMenuEl.style.display = "none";
     }
 }
+
+// Animation på knapp
+
+const button = document.getElementById('buttonAnimate');
+
+button.addEventListener('click', () => {
+    button.classList.add('shake');
+
+    // Ta bort animationen efter att den har kört klart (500ms)
+    setTimeout(() => {
+        button.classList.remove('shake');
+    }, 500);
+});

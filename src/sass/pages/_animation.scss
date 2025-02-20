@@ -62,7 +62,47 @@
     margin: 2% auto;
     transform: translateX(-50%);
     font-size: 2rem;
-    padding: 10px 20px; /* Gör bakgrunden mer synlig */
-    border-radius: 10px; /* Mjuka hörn */
+    padding: 10px 20px; 
+    border-radius: 10px; 
     animation: pulse 5s ease-in-out infinite alternate; /* Lugn puls */
+}
+
+#buttonContainer {
+    width: 200px;
+    margin: 2% auto;
+    }
+
+#buttonAnimate {
+    padding: 20px 20px;
+    font-size: 1.2em;
+    width: 100%;
+    margin: 5% auto;
+    background-color: #6E8E59;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+#buttonAnimate.shake {
+    animation: shake 0.5s ease forwards; /* Lägg till skakande animation */
 }
